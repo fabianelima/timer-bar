@@ -1,0 +1,137 @@
+/**STYLE: Template versão 3.2.6 **/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  background: #2e393d;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #2e393d;
+  max-width: 1280px;
+  max-height: 720px;
+  overflow: hidden;
+  margin: auto;
+  font-size: 1.6em;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 0 1.5em #1e2324;
+  color: white;
+}
+main img {
+  width: 100%;
+  display: block;
+}
+main h1,
+main h2,
+main h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #03a6ad;
+  text-transform: uppercase;
+}
+main p {
+  margin-bottom: 0.5em;
+}
+main ul,
+main ol {
+  margin-left: 2em;
+  text-align: left;
+}
+main button {
+  padding: 0.3em 2em;
+  margin-top: 0.7em;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  background: #03a6ad;
+  border: 0.2em solid white;
+  box-shadow: 0.2em 0.2em 0 #1e2324;
+  font-family: inherit;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+main button:hover {
+  background: white;
+  color: #03a6ad;
+}
+main button:active {
+  transform: translateY(0.1em);
+}
+main .dimmer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 6;
+}
+main .dimmer .modal {
+  position: absolute;
+  background: #2e393d;
+  color: white;
+  border: 0.2em solid white;
+  width: 56%;
+  padding: 2%;
+  top: 20%;
+  left: 20%;
+  box-shadow: 0 0 1em #000;
+  text-align: center;
+}
+main .content {
+  position: absolute;
+  z-index: 5;
+  padding: 2%;
+  width: 96%;
+  height: 93%;
+  text-align: center;
+}
+main .content .timer {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 8%;
+}
+main .content .timer .time {
+  color: #03a6ad;
+  font-size: 2em;
+  font-weight: 900;
+}
+main .content .timer .bar {
+  border: 0.2em solid #1e2324;
+  background: #1c1e1f;
+  width: 100%;
+  height: 2em;
+}
+main .content .timer .bar .innerbar {
+  background: linear-gradient(to right, #0cb3b6 0%, #42f1d9 100%);
+  background: -moz-linear-gradient(left, #0cb3b6 0%, #42f1d9 100%);
+  background: -webkit-linear-gradient(left, #0cb3b6 0%, #42f1d9 100%);
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1280px) {
+  main {
+    font-size: 2vw;
+    width: 100vw;
+    height: 56vw;
+  }
+}
+@media screen and (max-height: 720px) {
+  main {
+    font-size: 3.5vh;
+    width: 177vh;
+    height: 100vh;
+  }
+}

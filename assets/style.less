@@ -1,0 +1,131 @@
+/**STYLE: Template versão 3.2.6 **/
+
+* { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
+
+@turquesa: #03a6ad;
+@plomo: #2E393D;
+@preto: #1e2324;
+@quasipreto: #1c1e1f;
+@grad-turquesa: linear-gradient(to right, rgba(12,179,182,1) 0%, rgba(66,241,217,1) 100%);
+@grad-turquesa-moz: -moz-linear-gradient(left, rgba(12,179,182,1) 0%, rgba(66,241,217,1) 100%);
+@grad-turquesa-webkit: -webkit-linear-gradient(left, rgba(12,179,182,1) 0%, rgba(66,241,217,1) 100%);
+
+body {
+	background: @plomo;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: @plomo;
+	max-width: 1280px;
+	max-height: 720px;
+	overflow: hidden;
+	margin: auto;
+	font-size: 1.6em;
+	font-family: 'Lato', sans-serif;
+	box-shadow: 0 0 1.5em @preto;
+	color: white;
+
+	img { width: 100%; display: block; }
+	h1, h2, h3 { font-size: 1.5em; margin-bottom: 0.5em; color: @turquesa; text-transform: uppercase; }
+	p { margin-bottom: 0.5em; }
+	ul, ol { margin-left: 2em; text-align: left; }
+
+	button {
+		padding: 0.3em 2em;
+		margin-top: 0.7em;
+		cursor: pointer;
+		text-transform: uppercase;
+		color: white;
+		background: @turquesa;
+		border: 0.2em solid white;
+		box-shadow: 0.2em 0.2em 0 @preto;
+		font-family: inherit;
+		font-weight: bold;
+		box-sizing: border-box;
+	}
+
+	button:hover { background: white; color: @turquesa; }
+	button:active { transform: translateY(0.1em); }
+
+	.dimmer {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.7);
+		z-index: 6;
+
+		.modal {
+			position: absolute;
+			background: @plomo;
+			color: white;
+			border: 0.2em solid white;
+			width: 56%;
+			padding: 2%;
+			top: 20%;
+			left: 20%;
+			box-shadow: 0 0 1em #000;
+			text-align: center;
+		}
+	}
+
+	.content {
+		position: absolute;
+		z-index: 5;
+		padding: 2%;
+		width: 96%;
+		height: 93%;
+		text-align: center;
+
+		.timer {
+			position: absolute;
+			width: 80%;
+			left: 10%;
+			bottom: 8%;
+
+			.time {
+				color: @turquesa;
+				font-size: 2em;
+				font-weight: 900;
+			}
+
+			.bar {
+				border: 0.2em solid @preto;
+				background: @quasipreto;
+				width: 100%;
+				height: 2em;
+
+				.innerbar {
+					background: @grad-turquesa;
+					background: @grad-turquesa-moz;
+					background: @grad-turquesa-webkit;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	main {
+		font-size: 2vw;
+		width: 100vw;
+		height: 56vw;
+	}
+}
+
+@media screen and (max-height: 720px) {
+	main {
+		font-size: 3.5vh;
+		width: 177vh;
+		height: 100vh;
+	}
+}
